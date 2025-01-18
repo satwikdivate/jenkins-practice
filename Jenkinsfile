@@ -48,4 +48,12 @@ pipeline {
             }
         }
     }
+    post{
+        sucess{
+            bat echo"Succefulyy done with CICD"
+        }
+        failure{
+            bat echo"SOmething went wrong while learning CICD"
+        }
+    }
 }
