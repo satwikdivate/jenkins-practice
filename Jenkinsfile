@@ -16,8 +16,8 @@ pipeline {
                 // Replace 'Shri Ganesh' with a valid shell command or script
                 bat 'echo "Shri Ganesh"'
                 def prohjectName=params.PROJECT_NAME?:PROJECT_NAME
-                bat "echo "\"Your Project Name: ${projectName}\""
-                bat "echo "\"Your SetName: ${SET_NAME}""
+                bat 'echo "Your Project Name: ${projectName}"'
+                bat 'echo "Your SetName: ${SET_NAME}"'
             }
         }
     }
