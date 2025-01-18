@@ -29,13 +29,14 @@ pipeline {
             parallel{
                 stage("Unite Testing"){
                     steps{
-
-                        bat "echo Unite testing for ${PROJECT_NAME}"
+                        def projectparams=params.PROJECT_NAME?:PROJECT_NAME
+                        bat "echo Unite testing for ${projectparams}"
                     }
                 }
                 stage("Functional testing"){
                     steps{
-                        bat "echo Running Unit Tests for ${SET_NAME}"
+                        def setname=params.SET_NAME?:SET_NAME
+                        bat "echo Running Unit Tests for ${setname}"
                     }
                 }
             }
