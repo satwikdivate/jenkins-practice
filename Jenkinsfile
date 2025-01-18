@@ -19,8 +19,8 @@ pipeline {
                     // Replace 'Shri Ganesh' with a valid shell command or script
                     bat 'echo "Shri Ganesh"'
                     def projectName=params.PROJECT_NAME?:PROJECT_NAME
-                    bat "echo \"Your Project Name: ${projectName}\""
-                    bat "echo \"Your SetName: ${SET_NAME}\""
+                    bat "echo Your Project Name: ${projectName}"
+                    bat "echo Your SetName: ${SET_NAME}"
                }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
                 stage("Unite Testing"){
                     steps{
 
-                        bat "echo \"Unite testing for ${PROJECT_NAME}\""
+                        bat "echo Unite testing for ${PROJECT_NAME}"
                     }
                 }
                 stage("Functional testing"){
