@@ -49,7 +49,7 @@ pipeline {
         }
     }
     post{
-        sucess{
+        success{
           echo"Succefulyy done with CICD"
         }
         failure{
