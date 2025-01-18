@@ -24,5 +24,16 @@ pipeline {
                }
             }
         }
+        stage('Testing'){
+
+            parallel{
+                stage("Unite Testing"){
+                    bat "echo \"Unite testing for ${PROJECT_NAME}\""
+                }
+                stage("Functional testing"){
+                    bat "echo Running Unit Tests for ${SET_NAME}"
+                }
+            }
+        }
     }
 }
